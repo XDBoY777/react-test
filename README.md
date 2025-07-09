@@ -2,7 +2,7 @@
 
 - Please use JavaScript (and do not use TypeScript)
 
-- Try to reproduce the given design. It does not have to be perfect, the design itself has minor mistakes too. If you spot any, feel free to make note of them (this is not required). 
+- Try to reproduce the given design as close as possibly. It does not have to be perfect, the design itself has minor mistakes too. If you spot any, feel free to make note of them (this is not required). 
 
 - Use React as a frontend system.
 
