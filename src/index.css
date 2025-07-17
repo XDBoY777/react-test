@@ -1,0 +1,354 @@
+.App {
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  padding: 0rem 4rem;
+  overflow-x: hidden;
+}
+
+.app-header {
+  background-color: #1f2937;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -4rem;
+  margin-right: -4rem;
+}
+.header-fixer {
+  display: flex;
+  flex: 1;
+}
+.header-title {
+  display: flex;
+  flex: 1;
+  font-size: 15px;
+  font-weight: 200;
+  margin: 0;
+  width: 100%;
+  justify-content: center;
+}
+
+.cart-container {
+  position: relative;
+  display: flex;
+  flex: 1;
+  justify-content: end;
+}
+.cart-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.cart-count {
+  margin-left: 0.5rem;
+  background-color: #ef4444;
+  color: white;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart-header-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+
+  margin-top: 1rem;
+  border-top: 2px solid rgb(226, 223, 223);
+  padding-bottom: 0.25rem;
+  padding-top: 0.75rem;
+}
+.cart-dropdown {
+  position: absolute;
+  right: 0;
+  top: 2rem;
+  width: 16rem;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.375rem;
+  z-index: 100;
+}
+.cart-header-title {
+  display: flex;
+  flex: 1;
+}
+.units-title {
+  justify-content: end;
+}
+.price-title {
+  justify-content: end;
+}
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  border-bottom: 2px solid rgb(226, 223, 223);
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  background-color: rgb(226, 223, 223, 0.1);
+}
+.cart-item-prop {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  height: 30px;
+}
+.right-aligned-prop {
+  justify-content: end;
+}
+.cart-item-units {
+  margin-right: -40px;
+}
+.unit-controls {
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.25rem;
+  padding: 10px 0px;
+  height: 30px;
+}
+.update-unit-button {
+  background-color: transparent;
+  border: none;
+  padding-right: 0px;
+  height: 0.9rem;
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+}
+.update-unit-button:hover {
+  cursor: pointer;
+  color: #ef4444;
+}
+.trash-button {
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  display: flex;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.5;
+}
+
+.trash-button:hover {
+  cursor: pointer;
+  color: #ef4444;
+}
+
+.total-value {
+  height: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkout-button {
+  margin-top: 0.5rem;
+  background-color: #ef4444;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.checkout-button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.store-title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  margin: 2rem 0rem;
+}
+.store-title h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #1f2937;
+  text-align: center;
+  margin: 0px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+@media (min-width: 640px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.product-card {
+  background-color: white;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.product-image {
+  width: 100%;
+  height: 8rem;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+.product-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+.product-price {
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+.add-to-cart-button {
+  background-color: #ef4444;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+/* 
+info tooltip */
+
+.info-tooltip-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
+}
+
+.question-mark {
+  background: #ccc;
+  color: white;
+  border-radius: 50%;
+  padding: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.question-mark:hover {
+  background-color: #ef4444;
+}
+
+.tooltip-popup {
+  position: absolute;
+  top: 30px;
+  background: #fff5e5;
+  border: none;
+  padding: 12px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  z-index: 999;
+}
+
+.tooltip-popup.right {
+  left: 100%;
+  top: 0;
+}
+
+.tooltip-popup.left {
+  right: 30px;
+  top: 0;
+}
+
+.tooltip-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tooltip-image {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.tooltip-text {
+  flex: 1;
+  text-align: left;
+}
+
+.description-title {
+  margin: 0px;
+}
+
+.features-title {
+  margin: 0px;
+}
+
+.tooltip-description {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.tooltip-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.tooltip-features li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.feature-value {
+  text-align: left;
+  display: flex;
+  width: 100%;
+  flex: 2;
+  justify-content: flex-start;
+}
+
+.feature-name {
+  width: 100%;
+  flex: 1;
+  display: flex;
+}
